@@ -39,4 +39,4 @@ grants[which(grants$total_amount == min(grants$total_amount)), 'organization']
 # How many grants were awarded in 2010?
 grant2010Subset <- subset(grants$start_year, grants$start_year ==2010)
 
-sum(grant2010Subset)/2010
+sum(grant2010Subset)
