@@ -1,4 +1,6 @@
 # Exercise 1: working with data frames (review)
+#coder's note: I skip exercise two because it is the exact same problems but using dplyer, 
+#because I solved the below using a combination of the two, I moved on to exercise 3
 
 # Install devtools package: allows installations from GitHub
 install.packages("devtools")
