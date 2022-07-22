@@ -5,25 +5,32 @@ library('dplyr')
 
 # Use the `read.csv()` function to read in the included data set. Remember to
 # save it as a variable.
-read.csv("https://github.com/programming-for-data-science/book-exercises/blob/master/chapter-11-exercises/exercise-7/data/nba_teams_2016.csv", stringsAsFactors = FALSE)
+nbaStats <- read.csv("https://raw.githubusercontent.com/programming-for-data-science/book-exercises/master/chapter-11-exercises/exercise-7/data/nba_teams_2016.csv", stringsAsFactors = FALSE)
 
 # View the data frame you loaded, and get some basic information about the 
 # number of rows/columns. 
 # Note the "X" preceding some of the column titles as well as the "*" following
 # the names of teams that made it to the playoffs that year.
-
+View(nbaStats)
 
 # Add a column that gives the turnovers to steals ratio (TOV / STL) for each team
-
+nbaWithTurnoverSteal <- mutate(nbaStats, turnoverStealRatio = TOV / STL)
+View(nbaWithTurnoverSteal)
 
 # Sort the teams from lowest turnover/steal ratio to highest
 # Which team has the lowest turnover/steal ratio?
+arrange(nbaWithTurnoverSteal, turnoverStealRatio)
 
+maxTeam <- select(filter(nbaWithTurnoverSteal, turnoverStealRatio == max(turnoverStealRatio)), Team)
+maxTeam
 
 # Using the pipe operator, create a new column of assists per game (AST / G) 
 # AND sort the data.frame by this new column in descending order.
+topAssistsPerGame <- nbaStats %>%
+  mutate(assistsPerGame = AST / G) %>%
+  arrange(-assistsPerGame)
 
-
+View(nbaStats)
 # Create a data frame called `good_offense` of teams that scored more than 
 # 8700 points (PTS) in the season
 
