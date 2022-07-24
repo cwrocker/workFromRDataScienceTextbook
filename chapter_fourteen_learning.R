@@ -46,7 +46,7 @@ items <- response_data$items
 is.data.frame(items)
 
 #store yelp api key in variable
-yelp_key <- "NaZT-Bvr4tRFFlxNH4OJ6HbIQZpRi8g_SgAkB-sxNjv4f0hoaBAgv6ldIJ_g_DriqZr2Mu266oJKmYDxR_Uc7VW5zZRAUC8lL_-_yG73DglbExbKlHIwH84SUo_cYnYx"
+yelp_key <- "yelp_key_here"
 
 # Construct a search query for the Yelp Fusion API's Business Search endpoint
 base_uri <- "https://api.yelp.com/v3"
