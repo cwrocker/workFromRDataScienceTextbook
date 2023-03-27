@@ -4,4 +4,3 @@ This is a relatively straight forward title. I cannot attest that everything in 
 and working on a literature review at this time. I intend to eventually return and update 'problem' code, but for now, this is my entry forray into R programming
 
 
-current issues: chapter 7-exercise 4-last prompt
